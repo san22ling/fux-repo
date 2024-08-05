@@ -2,10 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: deploymentnginx1
+  namespace: sankfux
   labels:
     app: webserver
-    namespace: sankfux
-    name: mynginx
 spec:
   replicas: 2
   selector:
@@ -18,4 +17,4 @@ spec:
     spec:
       containers:
       - image: nginx
-        name: deploymentnginx1
+        name: mynginx
